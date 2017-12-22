@@ -3886,7 +3886,7 @@ body.light-skin.fixed-footer .footer {
 }
 .landing-page header {
     background: url('../images/landing/header.jpg') 50% 0 no-repeat;
-    height: 580px;
+    height: 600px;
     padding-top: 50px;
 }
 .landing-page section {
@@ -3903,7 +3903,9 @@ body.light-skin.fixed-footer .footer {
     position: relative
 }
 .landing-page .heading {
-    margin-top: 130px;
+    position: relative;
+    margin-top: 120px;
+    z-index: 2;
     color: #edf0f5
 }
 .landing-page .heading h1 {
@@ -3913,6 +3915,7 @@ body.light-skin.fixed-footer .footer {
     letter-spacing: -0.5px
 }
 .landing-page h4 {
+    line-height: 25px;
     font-weight: 600
 }
 .landing-page p {
@@ -3931,6 +3934,7 @@ body.light-skin.fixed-footer .footer {
     position: absolute;
     right: 60px;
     top: -20px;
+    z-index: 1;
     text-align: right
 }
 .landing-page .heading-image p {
@@ -3938,8 +3942,7 @@ body.light-skin.fixed-footer .footer {
     margin-bottom: 5px
 }
 .landing-page .heading-image img {
-    margin-left: 12px;
-    width: 45%;
+    width: 45%
 }
 .landing-page .navy-link {
     background: #455463;
