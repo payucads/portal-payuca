@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700');
 .h-modal-icon {
     font-size: 66px
 }
@@ -2832,7 +2832,7 @@ html {
     overflow-x: hidden!important
 }
 body {
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: #fff;
     font-size: 13px;
     color: #6a6c6f;
@@ -3894,10 +3894,11 @@ body.light-skin.fixed-footer .footer {
     border-bottom: 1px solid #eaeaea
 }
 .landing-page section h2 {
-    font-weight: 600;
+    font-weight: 400;
     margin-top: 0
 }
 .landing-page section p {
+    font-weight: 300;
     margin-top: 0
 }
 .landing-page header .container {
@@ -3918,7 +3919,7 @@ body.light-skin.fixed-footer .footer {
 }
 .landing-page h4 {
     line-height: 25px;
-    font-weight: 600
+    font-weight: 400
 }
 .landing-page p {
     color: #a7afb8;
@@ -4003,7 +4004,7 @@ body.light-skin.fixed-footer .footer {
     padding: 25px 10px 0 10px;
     border-radius: 4px 4px 0 0;
     font-size: 22px;
-    font-weight: 600
+    font-weight: 400
 }
 .landing-page .client {
     color: #a7afb8;
@@ -4039,6 +4040,21 @@ body.light-skin.fixed-footer .footer {
     -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.37);
     -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.37);
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.37);
+}
+
+.footermenu {
+    padding-bottom: 10px;
+    color: #6a6c6f;
+    border-bottom: 1px solid #eaeaea
+}
+
+.footermenu-last {
+    padding-bottom: 10px;
+    color: #6a6c6f
+}
+
+#footer {
+    padding: 20px
 }
 
 @media(max-width:1200px) {
