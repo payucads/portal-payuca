@@ -3853,7 +3853,7 @@ body.light-skin.fixed-footer .footer {
 }
 .landing-page .navbar-default .navbar-toggle:hover,
 .landing-page .navbar-default .navbar-toggle:focus {
-    background: #F7931D
+    background: #F7931D;
 }
 .landing-page .navbar-default .navbar-toggle:hover .icon-bar,
 .landing-page .navbar-default .navbar-toggle:focus .icon-bar {
@@ -3877,7 +3877,7 @@ body.light-skin.fixed-footer .footer {
 .landing-page .navbar-nav>li>a {
     font-size: 14px;
     font-weight: 600;
-    padding: 15px 15px;
+    padding: 30px 15px;
     color: #455463
 }
 .landing-page .navbar-nav>li,
@@ -3894,6 +3894,7 @@ body.light-skin.fixed-footer .footer {
     border-bottom: 1px solid #eaeaea
 }
 .landing-page section h2 {
+    font-weight: 600;
     margin-top: 0
 }
 .landing-page section p {
@@ -3904,7 +3905,8 @@ body.light-skin.fixed-footer .footer {
 }
 .landing-page .heading {
     position: relative;
-    margin-top: 120px;
+    margin-top: 140px;
+    margin-bottom: -20px;
     z-index: 2;
     color: #edf0f5
 }
@@ -3919,7 +3921,8 @@ body.light-skin.fixed-footer .footer {
     font-weight: 600
 }
 .landing-page p {
-    color: #a7afb8
+    color: #a7afb8;
+    font-size: 14px
 }
 .landing-page .heading span {
     font-size: 13px;
@@ -3933,7 +3936,7 @@ body.light-skin.fixed-footer .footer {
 .landing-page .heading-image {
     position: absolute;
     right: 60px;
-    top: -20px;
+    top: -10px;
     z-index: 1;
     text-align: right
 }
@@ -4005,11 +4008,39 @@ body.light-skin.fixed-footer .footer {
 .landing-page .client {
     color: #a7afb8;
     background: #f7f9fa;
-    padding: 30px 10px;
+
     margin: 0 0 20px 0;
     text-transform: uppercase;
+    text-align: center;
     font-weight: 600
 }
+
+.landing-page .client img {
+    width: 40%
+}
+
+.logo {
+    width: 45%;
+    margin-left: 15px
+}
+
+.features {
+    margin-top: -40px
+}
+
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.video {
+    margin-top: 60px;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.37);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.37);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.37);
+}
+
 @media(max-width:1200px) {
     .landing-page .heading-image {
         display: none

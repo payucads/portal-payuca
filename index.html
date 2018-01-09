@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="vendor/metisMenu/dist/metisMenu.css" />
     <link rel="stylesheet" href="vendor/animate.css/animate.css" />
     <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="vendor/toastr/build/toastr.min.css" />
 
     <!-- App styles -->
     <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" />
@@ -25,12 +26,6 @@
 
 </head>
 <body class="landing-page">
-
-<!-- Simple splash screen-->
-<div class="splash"> <div class="color-line"></div><div class="splash-title"><h1>Homer - Responsive Admin Theme</h1><p>Special Admin Theme for small and medium webapp with very clean and aesthetic style and feel. </p><div class="spinner"> <div class="rect1"></div> <div class="rect2"></div> <div class="rect3"></div> <div class="rect4"></div> <div class="rect5"></div> </div> </div> </div>
-<!--[if lt IE 7]>
-<p class="alert alert-danger">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
 
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -41,10 +36,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="index.html" class="navbar-brand">PAYUCA</a>
-            <div class="brand-desc">
-                Smart Parking
-            </div>
+            <a href="index.html"><img src="images/landing/payucaLogo.png" class="logo" alt="PAYUCA Logo" /></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -82,23 +74,23 @@
         </div>
     </div>
 </header>
-<section>
+<section class="features">
     <div class="container">
-    <div class="row">
+    <div class="row center">
         <div class="col-md-4">
-            <h4>HTML5 & CSS3</h4>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link btn btn-sm" href="#" role="button">Learn more</a></p>
+            <h4 class="m-t-lg"><i class="pe-7s-map-marker text-success icon-big"></i></h4>
+            <h4>Nearby Garages</h4>
+            <p>See three garages closest to your current location or find garages based on your input</p>
         </div>
         <div class="col-md-4">
-            <h4>Staggering Animations</h4>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of.</p>
-            <p><a class="navy-link btn btn-sm" href="#" role="button">Learn more</a></p>
+            <h4 class="m-t-lg"><i class="pe-7s-cash text-success icon-big"></i></h4>
+            <h4>Affordable Pricing</h4>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
         </div>
         <div class="col-md-4">
-            <h4>Unique Dashboard</h4>
-            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
-            <p><a class="navy-link btn btn-sm" href="#" role="button">Learn more</a></p>
+            <h4 class="m-t-lg"><i class="pe-7s-gleam text-success icon-big"></i></h4>
+            <h4>Starting Credit</h4>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
         </div>
     </div>
     </div>
@@ -106,141 +98,177 @@
 
 <section id="components" class="bg-light">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2><span class="text-success">UI components </span>for your app</h2>
-                <p>Lorem Ipsum available, but the majority have suffered alteration euismod. </p>
-            </div>
-        </div>
+      <div class="row text-center">
+          <div class="col-lg-12">
+              <h2><span class="text-success">So geht's</span></h2>
+              <p>PAYUCA öffnet dir einfach und schnell private Garagen Parkplätze</p>
+          </div>
+      </div>
         <div class="row m-t-md">
-            <div class="col-md-6">
-                <h4 class="m-t-xxxl">Special contacts view</h4>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
+            <div class="col-md-7">
+              <div class="embed-responsive embed-responsive-4by3 video">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/PkYEn_BRbcM?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+              </div>
             </div>
-            <div class="col-md-6">
-                <img src="images/landing/s2.png" class="img-responsive">
+            <div class="col-md-5">
+                    <div class="v-timeline vertical-container animate-panel" data-child="vertical-timeline-block" data-delay="1">
+                        <div class="vertical-timeline-block" style="">
+                            <div class="vertical-timeline-icon navy-bg">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <div class="vertical-timeline-content">
+                                <div class="p-sm">
+                                    <h2>Garage finden</h2>
+                                    <p>Guthaben aufladen, bevorzugte Garage finden und die Navigation starten. Du kannst den Parkplatz sogar 30 Minuten lang kostenlos reservieren.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vertical-timeline-block" style="">
+                            <div class="vertical-timeline-icon navy-bg">
+                                <i class="fa fa-sign-in"></i>
+                            </div>
+                            <div class="vertical-timeline-content">
+                                <div class="p-sm">
+                                    <h2>Garage öffnen</h2>
+                                    <p>Du kannst das Garagentor mit der App öffnen (Bluetooth benötigt), die Miete wird dann automatisch gestartet.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vertical-timeline-block" style="">
+                            <div class="vertical-timeline-icon navy-bg">
+                                <i class="fa fa-car"></i>
+                            </div>
+                            <div class="vertical-timeline-content">
+                                <div class="p-sm">
+                                    <h2>Parken</h2>
+                                    <p>In die Garage hineinfahren, den orangen Pfeilen folgen und auf einem PAYUCA Parkplatz parken.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vertical-timeline-block" style="">
+                            <div class="vertical-timeline-icon navy-bg">
+                                <i class="fa fa-sign-out"></i>
+                            </div>
+                            <div class="vertical-timeline-content">
+                                <div class="p-sm">
+                                    <h2>Miete beenden</h2>
+                                    <p>Über „Parken beenden“ öffnet sich die Eingangstüre und dein Mietprozess wird beendet – so einfach ist PAYUCA Smart Parking.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
-        <div class="row m-t-xl">
-            <div class="col-md-6">
-                <img src="images/landing/s4.png" class="img-responsive">
-            </div>
-            <div class="col-md-6">
-                <h4 class="m-t-xxl">Additional analytical components</h4>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
-            </div>
-        </div>
-        <div class="row  m-t-xl">
-            <div class="col-md-6">
-                <h4 class="m-t-xxl">Special designed project view</h4>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
-            </div>
-            <div class="col-md-6">
-                <img src="images/landing/s1.png" class="img-responsive">
-            </div>
-        </div>
-        <div class="row m-t-xl">
-            <div class="col-md-6">
-                <img src="images/landing/s3.png" class="img-responsive">
-            </div>
-            <div class="col-md-6">
-                <h4 class="m-t-xxl">Many widets components</h4>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
-            </div>
-        </div>
+
     </div>
 </section>
 
-<section id="features">
+<section id="pricing">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3 text-center">
-                <h2><span class="text-success">Many features to </span>discover with Homer</h2>
-                <p>
-                    Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes.
-                </p>
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <h2><span class="text-success">Unsere Preise </span>in der Übersicht</h2>
+                <p>Hier findest Du einen Überblick der Preise für Parken mit PAYUCA</p>
             </div>
         </div>
+
         <div class="row m-t-lg">
-            <div class="col-md-4 col-md-offset-2">
-                <strong>Donec sed odio dui.</strong>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-                <a class="btn btn-success btn-sm">Learn more</a>
+            <div class="col-lg-3">
+                <ul class="pricing-plan list-unstyled">
+                    <li class="pricing-title">
+                        Parken
+                    </li>
+                    <li class="pricing-desc">
+                        nur
+                    </li>
+                    <li class="pricing-title">
+                        <h2><span class="text-success">2€</span> / Std.</h2>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3">
+                <ul class="pricing-plan list-unstyled">
+                    <li class="pricing-title">
+                        Reservieren
+                    </li>
+                    <li class="pricing-desc">
+                        ersten 30 Min. sind gratis
+                    </li>
+                    <li class="pricing-title">
+                        <h2><span class="text-success">1€</span> / Std.</h2>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3">
+                <ul class="pricing-plan list-unstyled">
+                    <li class="pricing-title">
+                        Tagestarif
+                    </li>
+                    <li class="pricing-desc">
+                        maximal
+                    </li>
+                    <li class="pricing-title">
+                        <h2><span class="text-success">16€</span> / Tag</h2>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3">
+                <ul class="pricing-plan list-unstyled">
+                    <li class="pricing-title">
+                        Monatstarif
+                    </li>
+                    <li class="pricing-desc">
+                        auf Anfrage-NFC Chip €2,70
+                    </li>
+                    <li class="pricing-title">
+                        <h2><span class="text-success">€</span> / Monat</h2>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row m-t-lg text-center">
+            <div class="col-lg-12">
+                <h3>Payment methods</h3>
+            </div>
+        </div>
+
+        <div class="row  m-t-lg">
+            <div class="col-md-4">
+                <div class="client">
+                  <img src="images/landing/creditcard.png" alt="Creditcard" />
+                </div>
             </div>
             <div class="col-md-4">
-                <strong>Lorem Ipsum as their.</strong>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-                <a class="btn btn-success btn-sm">Learn more</a>
-            </div>
-        </div>
-        <div class="row m-t-lg">
-            <div class="col-md-4 col-md-offset-2">
-                <strong>Donec sed odio dui.</strong>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-                <a class="btn btn-success btn-sm">Learn more</a>
+                <div class="client">
+                  <img src="images/landing/sofort.png" alt="Sofortüberweisung" />
+                </div>
             </div>
             <div class="col-md-4">
-                <strong>Lorem Ipsum as their.</strong>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-                <a class="btn btn-success btn-sm">Learn more</a>
+                <div class="client">
+                  <img src="images/landing/paypal.png" alt="Paypal" />
+                </div>
             </div>
         </div>
+
     </div>
 </section>
 
 <section id="features2" class="bg-light">
     <div class="container">
-        <div class="row text-center">
-            <div class="col-lg-12">
+        <div class="row">
+            <div class="col-md-9">
                 <h2><span class="text-success">Special icons </span>for your app</h2>
                 <p>Lorem Ipsum available, but the majority have suffered alteration euismod. </p>
             </div>
-        </div>
-        <div class="row text-center">
-            <div class="col-md-3">
-                <h4 class="m-t-lg"><i class="pe-7s-airplay text-success icon-big"></i></h4>
-                <strong>Lorem Ipsum available</strong>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-            </div>
-            <div class="col-md-3">
-                <h4 class="m-t-lg"><i class="pe-7s-science text-success icon-big"></i></h4>
-                <strong>Lorem Ipsum available</strong>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-            </div>
-            <div class="col-md-3">
-                <h4 class="m-t-lg"><i class="pe-7s-display1 text-success icon-big"></i></h4>
-                <strong>Lorem Ipsum available</strong>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-            </div>
-            <div class="col-md-3">
-                <h4 class="m-t-lg"><i class="pe-7s-cloud-upload text-success icon-big"></i></h4>
-                <strong>Lorem Ipsum available</strong>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+            <div class="col-md-3 m-t-md">
+              <a href="https://itunes.apple.com/at/app/payuca-smart-parking/id1064020147?l=en&mt=8" style="margin-right: 1%;"><img src="images/landing/app-store-badge.png" alt="iOS App Download" /></a>
+              <a href="https://play.google.com/store/apps/details?id=com.payuca.android&hl=en"><img src="images/landing/google-play-badge.png" alt="Android App Download" /></a>
             </div>
         </div>
-        <div class="row text-center">
-            <div class="col-md-3">
-                <h4 class="m-t-lg"><i class="pe-7s-global text-success icon-big"></i></h4>
-                <strong>Lorem Ipsum available</strong>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-            </div>
-            <div class="col-md-3">
-                <h4 class="m-t-lg"><i class="pe-7s-battery text-success icon-big"></i></h4>
-                <strong>Lorem Ipsum available</strong>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-            </div>
-            <div class="col-md-3">
-                <h4 class="m-t-lg"><i class="pe-7s-users text-success icon-big"></i></h4>
-                <strong>Lorem Ipsum available</strong>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-            </div>
-            <div class="col-md-3">
-                <h4 class="m-t-lg"><i class="pe-7s-ticket text-success icon-big"></i></h4>
-                <strong>Lorem Ipsum available</strong>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-            </div>
-        </div>
-
     </div>
 </section>
 
@@ -311,148 +339,6 @@
     </div>
 </section>
 
-
-<section id="pricing" class="bg-light">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-lg-12">
-                <h2><span class="text-success">Best pricing </span>for your app</h2>
-                <p>Lorem Ipsum available, but the majority have suffered alteration euismod. </p>
-            </div>
-        </div>
-
-        <div class="row m-t-lg">
-            <div class="col-lg-3">
-                <ul class="pricing-plan list-unstyled">
-                    <li class="pricing-title">
-                        Basic
-                    </li>
-                    <li class="pricing-desc">
-                        Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.
-                    </li>
-                    <li class="pricing-price">
-                        <span>$16</span>
-                    </li>
-                    <li>
-                        Dashboards
-                    </li>
-                    <li>
-                        Projects view
-                    </li>
-                    <li>
-                        Contacts
-                    </li>
-                    <li>
-                        Calendar
-                    </li>
-                    <li>
-                        AngularJs
-                    </li>
-                    <li>
-                        <a class="btn btn-primary btn-sm" href="#">Signup today</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-lg-3">
-                <ul class="pricing-plan list-unstyled selected">
-                    <li class="pricing-title">
-                        Standard
-                    </li>
-                    <li class="pricing-desc">
-                        Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.
-                    </li>
-                    <li class="pricing-price">
-                        <span>$22</span>
-                    </li>
-                    <li>
-                        Dashboards
-                    </li>
-                    <li>
-                        Projects view
-                    </li>
-                    <li>
-                        Contacts
-                    </li>
-                    <li>
-                        Calendar
-                    </li>
-                    <li>
-                        AngularJs
-                    </li>
-                    <li class="plan-action">
-                        <a class="btn btn-primary btn-sm" href="#">Signup today</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-lg-3">
-                <ul class="pricing-plan list-unstyled">
-                    <li class="pricing-title">
-                        Premium
-                    </li>
-                    <li class="pricing-desc">
-                        Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.
-                    </li>
-                    <li class="pricing-price">
-                        <span>$160</span>
-                    </li>
-                    <li>
-                        Dashboards
-                    </li>
-                    <li>
-                        Projects view
-                    </li>
-                    <li>
-                        Contacts
-                    </li>
-                    <li>
-                        Calendar
-                    </li>
-                    <li>
-                        AngularJs
-                    </li>
-                    <li>
-                        <a class="btn btn-primary btn-sm" href="#">Signup today</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-lg-3">
-                <ul class="pricing-plan list-unstyled">
-                    <li class="pricing-title">
-                        Prestige
-                    </li>
-                    <li class="pricing-desc">
-                        Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.
-                    </li>
-                    <li class="pricing-price">
-                        <span>$260</span>
-                    </li>
-                    <li>
-                        Dashboards
-                    </li>
-                    <li>
-                        Projects view
-                    </li>
-                    <li>
-                        Contacts
-                    </li>
-                    <li>
-                        Calendar
-                    </li>
-                    <li>
-                        AngularJs
-                    </li>
-                    <li>
-                        <a class="btn btn-primary btn-sm" href="#">Signup today</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-    </div>
-</section>
 <section id="clients">
     <div class="container">
         <div class="row text-center">
@@ -567,6 +453,7 @@
 <script src="vendor/metisMenu/dist/metisMenu.min.js"></script>
 <script src="vendor/iCheck/icheck.min.js"></script>
 <script src="vendor/sparkline/index.js"></script>
+<script src="vendor/toastr/build/toastr.min.js"></script>
 
 <!-- App scripts -->
 <script src="scripts/homer.js"></script>
@@ -591,6 +478,32 @@
         });
 
     });
+</script>
+
+<script>
+      // Toastr options
+      toastr.options = {
+      "closeButton": true,
+      "debug": false,
+      "newestOnTop": false,
+      "progressBar": false,
+      "positionClass": "toast-bottom-right",
+      "preventDuplicates": true,
+      "onclick": null,
+      "showDuration": "300",
+      "hideDuration": "1000",
+      "timeOut": "0",
+      "extendedTimeOut": "0",
+      "showEasing": "swing",
+      "hideEasing": "linear",
+      "showMethod": "fadeIn",
+      "hideMethod": "fadeOut"
+      }
+
+      $(document).ready(function () {
+            toastr.warning('Wir benutzen Cookies um sicherzustellen, dass unsere Website richtig funktioniert. <br /> Durch die Nutzung dieser Website akzeptieren Sie den Einsatz unserer Cookies.', 'Cookie Hinweis');
+      });
+
 </script>
 
 </body>
