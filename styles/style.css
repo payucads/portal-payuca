@@ -4025,6 +4025,11 @@ body.light-skin.fixed-footer .footer {
     margin-left: 15px
 }
 
+.footerlogo {
+    width: 45%;
+    margin-top: -3%
+}
+
 .features {
     margin-top: -40px
 }
@@ -4042,6 +4047,10 @@ body.light-skin.fixed-footer .footer {
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.37);
 }
 
+.about {
+    padding-bottom: 20px
+}
+
 .footermenu {
     padding-bottom: 10px;
     font-size: 14px;
@@ -4053,6 +4062,14 @@ body.light-skin.fixed-footer .footer {
     padding-bottom: 10px;
     font-size: 14px;
     color: #6a6c6f
+}
+
+.footermenu:hover {
+    color: #F7931D
+}
+
+.footermenu-last:hover {
+    color: #F7931D
 }
 
 #footer {
