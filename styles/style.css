@@ -4080,6 +4080,12 @@ body.light-skin.fixed-footer .footer {
     padding: 20px
 }
 
+@media(max-width:992px) {
+    .agb {
+        margin-top: 20%
+    }
+}
+
 @media(max-width:1200px) {
     .landing-page .heading-image {
         display: none
