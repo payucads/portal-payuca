@@ -1680,8 +1680,8 @@ h6 {
     padding: 50px 70px
 }
 .blog-article-box .panel-body p {
-    font-family: "Times New Roman", Georgia, Serif;
-    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
     line-height: 32px;
     color: #515355
 }
@@ -1690,8 +1690,8 @@ h6 {
         padding: 10px 20px
     }
     .blog-article-box .panel-body p {
-        font-family: "Times New Roman", Georgia, Serif;
-        font-size: 16px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
         line-height: 28px
     }
     .blog-article-box .panel-heading {
