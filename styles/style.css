@@ -2843,23 +2843,23 @@ body {
 #header {
     background-color: #fff;
     display: block;
-    height: 62px;
+    height: 85px;
     margin: 0;
     padding: 0;
     position: relative;
     border-bottom: 1px solid #eaeaea
 }
 #menu {
-    width: 180px;
+    width: 380px;
     bottom: 0;
     float: left;
     left: 0;
     position: absolute;
-    top: 62px;
+    top: 85px;
     transition: margin .4s ease 0s
 }
 #wrapper {
-    margin: 0 0 0 180px;
+    margin: 0 0 0 380px;
     padding: 0;
     background: #f1f3f6;
     border-left: 1px solid #eaeaea;
@@ -2868,8 +2868,10 @@ body {
     min-height: 100%
 }
 .content {
-    padding: 25px 40px 40px 40px;
-    min-width: 320px
+    position: sticky;
+    top: 85px;
+    min-height: 100% !important;
+    min-width: 100%
 }
 .footer {
     padding: 10px 18px;
@@ -2901,7 +2903,7 @@ body {
     z-index: 1000
 }
 .fixed-navbar #wrapper {
-    top: 62px
+    top: 85px
 }
 .fixed-sidebar #menu {
     position: fixed;
@@ -3143,30 +3145,22 @@ body.modal-open {
 }
 #logo {
     float: left;
-    width: 180px;
     background-color: #f28e00;
-    padding: 18px 10px 18px 18px;
-    height: 56px;
+    height: 85px;
     text-align: center
 }
-#logo span {
-    font-weight: 600;
-    color: #fff;
-    font-size: 14px
-}
+
 #logo.light-version {
-    background-color: #f7f9fa;
+    background-color: #fff;
     border-bottom: 1px solid #eaeaea;
     text-align: center
 }
-#logo.light-version span {
-    font-weight: 600;
-    color: #f28e00;
-    font-size: 14px
-}
-.profile-picture {
-    padding: 20px 20px;
-    text-align: center
+
+.bezirk {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    text-align: left;
+    background: #f7f9fa
 }
 .label-menu-corner .label {
     font-size: 10px;
@@ -3177,13 +3171,11 @@ body.modal-open {
     top: 12px
 }
 #side-menu {
-    background: #f7f9fa
+    background: #ffffff
 }
 #side-menu li a {
     color: #6a6c6f;
-    text-transform: uppercase;
-    font-weight: 700;
-    padding: 15px 20px
+    padding: 50px 20px
 }
 #side-menu li {
     border-bottom: 1px solid #eaeaea
@@ -3223,7 +3215,7 @@ body.modal-open {
     content: "\f107"
 }
 #top-navigation {
-    height: 56px;
+    height: 85px;
     position: relative;
     float: left
 }
@@ -3249,7 +3241,7 @@ body.modal-open {
 }
 .navbar-nav>li,
 .navbar-nav>li>a {
-    height: 56px
+    height: 85px
 }
 .navbar-nav>li>a {
     padding: 15px 20px;
