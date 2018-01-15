@@ -2871,6 +2871,7 @@ body {
     position: sticky;
     top: 85px;
     min-height: 100% !important;
+    overflow-y: hidden;
     min-width: 100%
 }
 .footer {
@@ -2921,7 +2922,8 @@ body {
     position: fixed;
     z-index: 1001;
     bottom: 0;
-    left: 181px;
+    left: 380px;
+    border-left: 1px solid #eaeaea;
     right: 0
 }
 .fixed-footer.hide-sidebar .footer {

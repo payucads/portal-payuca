@@ -27,11 +27,12 @@
        #map {
         min-height: 91vh;
         max-height: 0 !important;
+        overflow: hidden;
        }
     </style>
 
 </head>
-<body class="fixed-navbar sidebar-scroll landing-page">
+<body class="fixed-navbar sidebar-scroll landing-page fixed-footer">
 
 <!-- Header -->
 <div id="header">
@@ -197,12 +198,15 @@
 <div id="wrapper">
 
     <div class="content">
-        <div class="row">
-            <div class="col-lg-12">
-              <div id="map"></div>
-            </div>
-        </div>
+        <div id="map"></div>
     </div>
+
+    <footer class="footer">
+        <span class="pull-right">
+            Example text
+        </span>
+        Company 2015-2020
+    </footer>
 
 </div>
 
