@@ -379,5 +379,6 @@ function setMarkers(map) {
       title: garage[0],
       zIndex: garage[3]
     });
+
   }
 }
