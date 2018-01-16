@@ -23,14 +23,6 @@
     <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css" />
     <link rel="stylesheet" href="styles/style.css">
 
-    <style>
-       #map {
-        min-height: 91vh;
-        max-height: 0 !important;
-        overflow: hidden;
-       }
-    </style>
-
 </head>
 <body class="fixed-navbar sidebar-scroll landing-page fixed-footer">
 
@@ -197,16 +189,24 @@
 <!-- Main Wrapper -->
 <div id="wrapper">
 
-    <div class="content">
-        <div id="map"></div>
-    </div>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD85LJMNFKoyifgapcHDGxxl6SF2aj9R70">
+      </script>
+    </head>
 
-    <footer class="footer">
-        <span class="pull-right">
-            Example text
-        </span>
-        Company 2015-2020
-    </footer>
+    <body onload="initMap()">
+      <div class="content">
+        <div class="mapcontainer">
+          <div>
+            <div id="map-canvas"></div>
+          </div>
+        </div>
+      </div>
+    </body>
+
+    </html>
 
 </div>
 
@@ -222,25 +222,7 @@
 
 <!-- App scripts -->
 <script src="scripts/homer.js"></script>
-
-<script>
-      function initMap() {
-        var uluru = {lat: 48.214046, lng: 16.367354};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 12,
-          center: uluru,
-          gestureHandling: 'cooperative'
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-</script>
-
-<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD85LJMNFKoyifgapcHDGxxl6SF2aj9R70&callback=initMap">
-</script>
+<script src="scripts/index.js"></script>
 
 </body>
 </html>
