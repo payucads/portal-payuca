@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway9C:300,400,600,700');
 .h-modal-icon {
     font-size: 66px
 }
@@ -1681,7 +1682,7 @@ h6 {
 }
 .blog-article-box .panel-body p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 32px;
     color: #515355
 }
@@ -1691,7 +1692,7 @@ h6 {
     }
     .blog-article-box .panel-body p {
         font-family: 'Montserrat', sans-serif;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 28px
     }
     .blog-article-box .panel-heading {
@@ -3904,6 +3905,11 @@ body.light-skin.fixed-footer .footer {
     height: 600px;
     padding-top: 50px;
 }
+.landing-page header.partner {
+    background: url('../images/landing/header.jpg') 50% 0 no-repeat;
+    height: 300px;
+    padding-top: 20px;
+}
 .landing-page section {
     padding: 50px 0 50px 0;
     border-bottom: 1px solid #eaeaea
@@ -3938,7 +3944,7 @@ body.light-skin.fixed-footer .footer {
 }
 .landing-page p {
     color: #a7afb8;
-    font-size: 14px
+    font-size: 16px
 }
 .landing-page .heading span {
     font-size: 13px;
