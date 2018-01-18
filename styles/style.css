@@ -2834,6 +2834,14 @@ html, body {
     position: fixed !important;
 }
 
+html, body.rest {
+    padding: 0;
+    margin: 0;
+    width: 100% !important;
+    height: 100% !important;
+    position: sticky !important;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #fff;
