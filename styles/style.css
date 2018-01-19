@@ -4101,6 +4101,12 @@ body.light-skin.fixed-footer .footer {
     padding: 20px
 }
 
+@media (max-width: 768px) {
+    .col-xs-12.text-right, .col-xs-12.text-left {
+      text-align: center;
+    }
+}
+
 @media(max-width:992px) {
     .agb {
         margin-top: 20%
