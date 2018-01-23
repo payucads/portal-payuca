@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700');
-@import url('https://fonts.googleapis.com/css?family=Raleway9C:300,400,600,700');
 .h-modal-icon {
     font-size: 66px
 }
@@ -2827,7 +2826,7 @@ body.blank {
     margin: 30px 0
 }
 
-html, body {
+.rest {
     padding: 0;
     margin: 0;
     width: 100% !important;
@@ -2835,12 +2834,11 @@ html, body {
     position: fixed !important;
 }
 
-html, body.rest {
-    padding: 0;
+html {
     margin: 0;
-    width: 100% !important;
-    height: 100% !important;
-    position: sticky !important;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden!important
 }
 
 body {
@@ -2848,6 +2846,9 @@ body {
     background-color: #fff;
     font-size: 13px;
     color: #6a6c6f;
+    margin: 0;
+    padding: 0;
+    height: 100%
 }
 
 #header {
