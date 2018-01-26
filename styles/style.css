@@ -3856,16 +3856,16 @@ body.light-skin.fixed-footer .footer {
     background: #fff
 }
 .landing-page .navbar .navbar-brand {
-    font-size: 12px;
+    font-size: 14px;
     height: auto;
-    margin-top: 8px;
+    margin-top: 21px;
     padding: 9px 15px;
-    font-weight: 700;
+    font-weight: 600;
     border-radius: 5px;
     color: #fff;
     display: block;
     background-color: #F7931D;
-    margin-left: 0
+    margin-left: 10px
 }
 .landing-page .navbar-default .navbar-toggle:hover,
 .landing-page .navbar-default .navbar-toggle:focus {
@@ -3894,6 +3894,7 @@ body.light-skin.fixed-footer .footer {
     font-size: 14px;
     font-weight: 600;
     padding: 30px 15px;
+    margin-right: -5px;
     color: #455463
 }
 .landing-page .navbar-nav>li,
