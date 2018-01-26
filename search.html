@@ -237,28 +237,6 @@
 <!-- App scripts -->
 <script src="scripts/homer.js"></script>
 
-<!-- Local script for menu handle -->
-<!-- It can be also directive -->
-<script>
-    $(document).ready(function () {
-
-        // Page scrolling feature
-        $('a.page-scroll').bind('click', function(event) {
-            var link = $(this);
-            $('html, body').stop().animate({
-                scrollTop: $(link.attr('href')).offset().top - 50
-            }, 500);
-            event.preventDefault();
-        });
-
-        $('body').scrollspy({
-            target: '.navbar-fixed-top',
-            offset: 80
-        });
-
-    });
-</script>
-
 <script>
       // Toastr options
       toastr.options = {
