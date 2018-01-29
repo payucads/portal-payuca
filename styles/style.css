@@ -1794,12 +1794,12 @@ ul.mailbox-list li.active a,
 ul.h-list li.active a {
     background: #f7f9fa;
     border: 1px solid #e4e5e7;
-    font-weight: 600;
+    font-weight: 400;
     border-radius: 1px
 }
 ul.mailbox-list li:hover a,
 ul.h-list li:hover a {
-    font-weight: 600
+    font-weight: 400
 }
 .table-mailbox .radio,
 .table-mailbox .checkbox {
