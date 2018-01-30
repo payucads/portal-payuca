@@ -51,7 +51,7 @@
                <div class="col-md-3">
                   <div class="hpanel">
                      <div class="panel-body">
-                       <h4 class="text-center">Menü</h4>
+                        <h4 class="text-center">Menü</h4>
                         <ul class="mailbox-list">
                            <li class="active">
                               <a href="#"><i class="fa fa-user-circle-o"></i> Persönliche Daten</a>
@@ -69,62 +69,80 @@
                <div class="col-lg-9">
                   <div class="hpanel">
                      <div class="panel-body">
-                       <h3 class="text-success m-b-lg">Persönliche Daten </h3>
-                       <div class="row">
-                          <div class="form-group col-lg-6">
-                             <label>Vorname</label>
-                             <input type="text" value="Max" id="" required="" class="form-control" name="vorname">
-                          </div>
-                          <div class="form-group col-lg-6">
-                             <label>Nachname</label>
-                             <input type="text" value="Musterman" id="" required="" class="form-control" name="nachname">
-                          </div>
-                          <div class="form-group col-lg-6">
-                             <label>E-Mail-Adresse</label>
-                             <input type="email" value="max@mail.at" id="" required="" class="form-control" name="email">
-                          </div>
-                          <div class="form-group col-lg-6">
-                             <label>Telefon</label>
-                             <input type="tel" value="+43 676 6702240" id="" required="" class="form-control" name="telefon">
-                          </div>
-                       </div>
-                       <div class="row">
-                          <div class="form-group col-lg-6">
-                             <label>Straße</label>
-                             <input type="text" value="Guglgasse" id="" required="" class="form-control" name="strasse">
-                          </div>
-                          <div class="form-group col-lg-6">
-                             <label>Haus / Stiege / Tür</label>
-                             <input type="text" value="8/3/3" id="" required="" class="form-control" name="hausstiegetuer">
-                          </div>
-                          <div class="form-group col-lg-6">
-                             <label>Postleitzahl</label>
-                             <input type="number" value="1110" id="" required="" class="form-control" name="postleitzahl">
-                          </div>
-                          <div class="form-group col-lg-6">
-                             <label>Stadt</label>
-                             <input type="text" value="Wien" id="" required="" class="form-control" name="stadt">
-                          </div>
-                          <div class="form-group col-lg-6">
-                             <label>Kennzeichen</label>
-                             <input type="text" value="W7777H" id="" required="" class="form-control" name="kennzeichen">
-                          </div>
-                       </div>
-                       <a class="btn btn-success pull-right" href="#">Speichern</a>
-
-                       <hr class="m-t-xxl">
-                       <h4>Passwort-Wiederherstellen</h4>
-                       <div class="row">
-                         <div class="form-group col-lg-6">
-                            <label>Neues Passwort</label>
-                            <input type="password" value="******" id="" required="" class="form-control" name="passwort">
-                         </div>
-                         <div class="form-group col-lg-6">
-                            <label>Neues Passwort wiederholen</label>
-                            <input type="password" value="******" id="" required="" class="form-control" name="passwort">
-                         </div>
-                       </div>
-                       <a class="btn btn-success pull-right" href="#">Speichern</a>
+                        <h4 class="m-b-md">Persönliche Daten </h4>
+                        <div class="row">
+                           <div class="form-group col-lg-6">
+                              <label>Vorname</label>
+                              <input type="text" value="Max" id="" required="" class="form-control" name="vorname">
+                           </div>
+                           <div class="form-group col-lg-6">
+                              <label>Nachname</label>
+                              <input type="text" value="Musterman" id="" required="" class="form-control" name="nachname">
+                           </div>
+                           <div class="form-group col-lg-6">
+                              <label>E-Mail-Adresse</label>
+                              <input type="email" value="max@mail.at" id="" required="" class="form-control" name="email">
+                           </div>
+                           <div class="form-group col-lg-6">
+                              <label>Telefon</label>
+                              <input type="tel" value="+43 676 6702240" id="" required="" class="form-control" name="telefon">
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="form-group col-lg-6">
+                              <label>Straße</label>
+                              <input type="text" value="Guglgasse" id="" required="" class="form-control" name="strasse">
+                           </div>
+                           <div class="form-group col-lg-6">
+                              <label>Haus / Stiege / Tür</label>
+                              <input type="text" value="8/3/3" id="" required="" class="form-control" name="hausstiegetuer">
+                           </div>
+                           <div class="form-group col-lg-6">
+                              <label>Postleitzahl</label>
+                              <input type="number" value="1110" id="" required="" class="form-control" name="postleitzahl">
+                           </div>
+                           <div class="form-group col-lg-6">
+                              <label>Stadt</label>
+                              <input type="text" value="Wien" id="" required="" class="form-control" name="stadt">
+                           </div>
+                        </div>
+                        <a class="btn btn-success btn-sm pull-right" href="#">Speichern</a>
+                        <hr class="m-t-xxl m-b-lg">
+                        <h4 class="m-b-md">Kennzeichen</h4>
+                        <div class="row">
+                           <div class="col-lg-6">
+                              <label>Kennzeichen 1</label>
+                              <div class="input-group">
+                                 <input type="text" class="form-control" value="W7777H" id="" disabled name="kennzeichen">
+                                 <div class="input-group-btn">
+                                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false"><span class="fa fa-cog"></span></button>
+                                    <ul class="dropdown-menu pull-right">
+                                       <li><a href="">Bearbeiten</a></li>
+                                       <li><a href="">Entfernen</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row m-t-md">
+                           <div class="form-group col-lg-6">
+                              <label>Kennzeichen 2</label> <br>
+                              <a class="btn btn-outline btn-primary"><i class="fa fa-plus-circle"></i> Hinzufügen </a>
+                           </div>
+                        </div>
+                        <hr class="m-t-lg">
+                        <h4 class="m-b-md">Passwort-Wiederherstellen</h4>
+                        <div class="row">
+                           <div class="form-group col-lg-6">
+                              <label>Neues Passwort</label>
+                              <input type="password" value="******" id="" required="" class="form-control" name="passwort">
+                           </div>
+                           <div class="form-group col-lg-6">
+                              <label>Neues Passwort wiederholen</label>
+                              <input type="password" value="******" id="" required="" class="form-control" name="passwort">
+                           </div>
+                        </div>
+                        <a class="btn btn-success btn-sm pull-right" href="#">Passwort ändern</a>
                      </div>
                   </div>
                </div>
