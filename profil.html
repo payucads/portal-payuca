@@ -69,7 +69,12 @@
                <div class="col-lg-9">
                   <div class="hpanel">
                      <div class="panel-body">
-                        <h4 class="m-b-md">Persönliche Daten </h4>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <h4 class="m-b-md">Persönliche Daten </h4>
+                          </div>
+                        </div>
+
                         <div class="row">
                            <div class="form-group col-lg-6">
                               <label>Vorname</label>
@@ -272,7 +277,7 @@
             $("#adresse").hide();
 
             $("#showAdresse").click(function(){
-                $("#adresse").show();
+                $("#adresse").show("slow");
                 $(this).hide();
             });
         });
