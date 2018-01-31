@@ -88,24 +88,31 @@
                               <input type="tel" value="+43 676 6702240" id="" required="" class="form-control" name="telefon">
                            </div>
                         </div>
-                        <div class="row">
+
+                        <div class="row m-t-md" id="adresse">
                            <div class="form-group col-lg-6">
                               <label>Straße</label>
-                              <input type="text" value="Guglgasse" id="" required="" class="form-control" name="strasse">
+                              <input type="text" value="" id="" required="" class="form-control" name="strasse" placeholder="Guglgasse">
                            </div>
                            <div class="form-group col-lg-6">
                               <label>Haus / Stiege / Tür</label>
-                              <input type="text" value="8/3/3" id="" required="" class="form-control" name="hausstiegetuer">
+                              <input type="text" value="" id="" required="" class="form-control" name="hausstiegetuer" placeholder="8/3/3">
                            </div>
                            <div class="form-group col-lg-6">
                               <label>Postleitzahl</label>
-                              <input type="number" value="1110" id="" required="" class="form-control" name="postleitzahl">
+                              <input type="number" value="" id="" required="" class="form-control" name="postleitzahl" placeholder="1110">
                            </div>
                            <div class="form-group col-lg-6">
                               <label>Stadt</label>
-                              <input type="text" value="Wien" id="" required="" class="form-control" name="stadt">
+                              <input type="text" value="" id="" required="" class="form-control" name="stadt" placeholder="Wien">
                            </div>
                         </div>
+                        <div class="row m-t-md">
+                          <div class="col-lg-6">
+                            <button class="btn btn-outline btn-primary" id="showAdresse"><i class="fa fa-plus-circle"></i> Adresse hinzufügen </button>
+                          </div>
+                        </div>
+
                         <a class="btn btn-success btn-sm pull-right" href="#">Speichern</a>
                         <hr class="m-t-xxl m-b-lg">
                         <h4 class="m-b-md">Kennzeichen</h4>
@@ -259,6 +266,18 @@
       <script src="vendor/toastr/build/toastr.min.js"></script>
       <!-- App scripts -->
       <script src="scripts/homer.js"></script>
+
+      <script>
+        $(document).ready(function(){
+            $("#adresse").hide();
+
+            $("#showAdresse").click(function(){
+                $("#adresse").show();
+                $(this).hide();
+            });
+        });
+      </script>
+
       <script>
          $(function(){
 
