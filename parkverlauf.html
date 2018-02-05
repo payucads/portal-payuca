@@ -13,6 +13,8 @@
       <link rel="stylesheet" href="vendor/metisMenu/dist/metisMenu.css" />
       <link rel="stylesheet" href="vendor/animate.css/animate.css" />
       <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" />
+      <link rel="stylesheet" href="vendor/select2-3.5.2/select2.css" />
+      <link rel="stylesheet" href="vendor/bootstrap-datepicker-master/dist/css/bootstrap-datepicker3.min.css">
       <link rel="stylesheet" href="vendor/toastr/build/toastr.min.css" />
       <!-- App styles -->
       <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" />
@@ -33,14 +35,12 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                <ul class="nav navbar-nav navbar-right">
-                  <li><a class="page-scroll" href="index.html">Home</a></li>
-                  <li><a class="page-scroll" page-scroll href="index.html#sogehts">So geht's</a></li>
-                  <li><a class="page-scroll" page-scroll href="index.html#pricing">Preis</a></li>
-                  <li><a class="page-scroll" page-scroll href="index.html#team">Team</a></li>
-                  <li><a class="page-scroll" page-scroll href="standorte.html">Standorte</a></li>
-                  <li><a class="page-scroll" page-scroll href="partner.html">Partner</a></li>
-                  <li><a class="page-scroll" page-scroll href="index.html#kontakt">Kontakt</a></li>
-                  <li><a href="login.html" class="navbar-brand">Log In</a></li>
+                  <li><a href="standorte.html">Home</a></li>
+                  <li><a href="guthaben.html">Guthaben</a></li>
+                  <li class="active"><a href="parkverlauf.html">Parkverlauf</a></li>
+                  <li><a href="gutschein.html">Gutschein</a></li>
+                  <li><a href="nfc.html">NFC-Chip</a></li>
+                  <li><a href="profil.html" class="navbar-brand">Djordje</a></li>
                </ul>
             </div>
          </div>
@@ -48,25 +48,77 @@
       <section id="parkverlauf" class="bg-light agb">
          <div class="container">
             <div class="row">
-               <div class="col-lg-3">
-                  <div class="hpanel animated-panel zoomIn">
-                     <div class="panel-body">
-                        <h4 class="text-center">Menü</h4>
-                        <ul class="mailbox-list">
-                           <li>
-                              <a href="profil.html"><i class="fa fa-user-circle-o"></i> Persönliche Daten</a>
-                           </li>
-                           <li>
-                              <a href="guthaben.html"><i class="fa fa-database"></i> Guthaben</a>
-                           </li>
-                           <li class="active">
-                              <a href="parkverlauf.html"><i class="fa fa-history"></i> Parkverlauf</a>
-                           </li>
-                        </ul>
+               <div class="col-lg-12">
+                 <div class="hpanel animated-panel zoomIn">
+                   <div class="panel-body">
+                     <div class="col-lg-4 col-md-4 m-b-md">
+                       <h5>Kennzeichen</h5>
+                       <select class="form-control" name="kennzeichen">
+                         <option>W7777H</option>
+                         <option>W8888H</option>
+                       </select>
                      </div>
-                  </div>
+                     <div class="col-lg-4 col-md-4 m-b-md">
+                       <h5>Garage</h5>
+                         <select class="form-control" name="garage">
+                           <optgroup label="1020 Wien">
+                              <option value="Nordbahnstrasse">Garage Nordbahnstraße</option>
+                              <option value="Grosse_Schiffgasse">Garage Große Schiffgasse</option>
+                           </optgroup>
+                           <optgroup label="1030 Wien">
+                              <option value="Steingasse">Garage Steingasse</option>
+                              <option value="Ungargasse">Garage Ungargasse</option>
+                              <option value="Barichgasse">Garage Barichgasse</option>
+                           </optgroup>
+                           <optgroup label="1040 Wien">
+                              <option value="Operngasse">Garage Operngasse</option>
+                              <option value="Floragasse">Garage Floragasse</option>
+                           </optgroup>
+                           <optgroup label="1060 Wien">
+                              <option value="Schmalzhofgasse">Garage Schmalzhofgasse</option>
+                              <option value="Webgasse">Garage Webgasse</option>
+                           </optgroup>
+                           <optgroup label="1090 Wien">
+                              <option value="Lazarettgasse">Garage Lazarettgasse</option>
+                              <option value="Liechtensteinstrasse">Garage de France</option>
+                              <option value="Boltzmanngasse">Garage Boltzmanngasse</option>
+                           </optgroup>
+                           <optgroup label="1110 Wien">
+                              <option value="Geiselberg">Garage Geiselberg</option>
+                              <option value="Guglgasse">Garage Gasometer</option>
+                           </optgroup>
+                           <optgroup label="1150 Wien">
+                              <option value="Pelzgasse">Garage Pelzgasse</option>
+                              <option value="Meiselmarkt">Garage Meiselmarkt</option>
+                           </optgroup>
+                           <optgroup label="1160 Wien">
+                              <option value="Wilhelminenstrasse">Garage Wilhelminenstraße</option>
+                              <option value="Roemergasse">Garage Römergasse</option>
+                              <option value="Gaullachergasse">Garage Gaullachergasse</option>
+                           </optgroup>
+                           <optgroup label="1190 Wien">
+                              <option value="Puechlgasse">Garage Püchlgasse</option>
+                              <option value="Klabundgasse">Garage Klabundgasse</option>
+                           </optgroup>
+                           <optgroup label="1200 Wien">
+                              <option value="Wehlistrasse">Garage Wehlistraße</option>
+                              <option value="Leystrasse">Garage Leystraße</option>
+                              <option value="Pappenheimgasse">Garage Pappenheimgasse</option>
+                           </optgroup>
+                         </select>
+                     </div>
+                     <div class="col-lg-4 col-md-4 m-b-md">
+                       <h5>Zeitraum</h5>
+                       <div class="input-daterange input-group" id="datepicker">
+                         <input type="text" class="form-control" name="start">
+                         <span class="input-group-addon">bis</span>
+                         <input type="text" class="form-control" name="end">
+                       </div>
+                     </div>
+                   </div>
+                 </div>
                </div>
-               <div class="col-lg-9">
+               <div class="col-lg-6">
                 <div class="hpanel animated-panel zoomIn hyellow">
                     <div class="panel-body">
                         <div class="stats-title">
@@ -77,14 +129,14 @@
                             <p><i class="fa fa-stop"></i> 30.09.2017, 14:00</p>
                             <h4 class="m-t-md"><i class="fa fa-car"></i> W7777H
                               <span class="pull-right">
-                                <a class="btn btn-primary btn-xs btn-outline pull-right" href="ticket.html">Problem melden</a>
+                                <a class="btn btn-default btn-xs btn-outline pull-right" href="ticket.html">Problem melden</a>
                               </span>
                             </h4>
                         </div>
                     </div>
                 </div>
                </div>
-               <div class="col-lg-9">
+               <div class="col-lg-6">
                 <div class="hpanel animated-panel zoomIn hyellow">
                     <div class="panel-body">
                         <div class="stats-title">
@@ -95,14 +147,14 @@
                             <p><i class="fa fa-stop"></i> 30.09.2017, 14:00</p>
                             <h4 class="m-t-md"><i class="fa fa-car"></i> W7777H
                               <span class="pull-right">
-                                <a class="btn btn-primary2 btn-xs btn-outline pull-right" href="ticket.html">Problem melden</a>
+                                <a class="btn btn-default btn-xs btn-outline pull-right" href="ticket.html">Problem melden</a>
                               </span>
                             </h4>
                         </div>
                     </div>
                 </div>
                </div>
-               <div class="col-lg-9 col-lg-offset-3">
+               <div class="col-lg-6">
                 <div class="hpanel animated-panel zoomIn hyellow">
                     <div class="panel-body">
                         <div class="stats-title">
@@ -113,14 +165,68 @@
                             <p><i class="fa fa-stop"></i> 30.09.2017, 14:00</p>
                             <h4 class="m-t-md"><i class="fa fa-car"></i> W7777H
                               <span class="pull-right">
-                                <a class="btn btn-primary btn-xs btn-outline pull-right" href="ticket.html">Problem melden</a>
+                                <a class="btn btn-default btn-xs btn-outline pull-right" href="ticket.html">Problem melden</a>
                               </span>
                             </h4>
                         </div>
                     </div>
                 </div>
                </div>
-               <div class="col-lg-9 col-lg-offset-3 text-center animated-panel zoomIn">
+               <div class="col-lg-6">
+                <div class="hpanel animated-panel zoomIn hyellow">
+                    <div class="panel-body">
+                        <div class="stats-title">
+                            <h4 class="text-success m-b-md"><i class="fa fa-map-pin text-s"></i> Garage Gasometer
+                              <span class="pull-right"><i class="fa fa-money"></i> 2,00 €</span>
+                            </h4>
+                            <p><i class="fa fa-play"></i> 30.09.2017, 13:00</p>
+                            <p><i class="fa fa-stop"></i> 30.09.2017, 14:00</p>
+                            <h4 class="m-t-md"><i class="fa fa-car"></i> W7777H
+                              <span class="pull-right">
+                                <a class="btn btn-default btn-xs btn-outline pull-right" href="ticket.html">Problem melden</a>
+                              </span>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+               </div>
+               <div class="col-lg-6">
+                <div class="hpanel animated-panel zoomIn hyellow">
+                    <div class="panel-body">
+                        <div class="stats-title">
+                            <h4 class="text-success m-b-md"><i class="fa fa-map-pin text-s"></i> Garage Gasometer
+                              <span class="pull-right"><i class="fa fa-money"></i> 2,00 €</span>
+                            </h4>
+                            <p><i class="fa fa-play"></i> 30.09.2017, 13:00</p>
+                            <p><i class="fa fa-stop"></i> 30.09.2017, 14:00</p>
+                            <h4 class="m-t-md"><i class="fa fa-car"></i> W7777H
+                              <span class="pull-right">
+                                <a class="btn btn-default btn-xs btn-outline pull-right" href="ticket.html">Problem melden</a>
+                              </span>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+               </div>
+               <div class="col-lg-6">
+                <div class="hpanel animated-panel zoomIn hyellow">
+                    <div class="panel-body">
+                        <div class="stats-title">
+                            <h4 class="text-success m-b-md"><i class="fa fa-map-pin text-s"></i> Garage Gasometer
+                              <span class="pull-right"><i class="fa fa-money"></i> 2,00 €</span>
+                            </h4>
+                            <p><i class="fa fa-play"></i> 30.09.2017, 13:00</p>
+                            <p><i class="fa fa-stop"></i> 30.09.2017, 14:00</p>
+                            <h4 class="m-t-md"><i class="fa fa-car"></i> W7777H
+                              <span class="pull-right">
+                                <a class="btn btn-default btn-xs btn-outline pull-right" href="ticket.html">Problem melden</a>
+                              </span>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+               </div>
+               <div class="col-lg-12 text-center animated-panel zoomIn">
                  <div class="btn-group">
                     <button type="button" class="btn btn-default"><i class="fa fa-chevron-left"></i></button>
                     <button class="btn btn-default active">1</button>
@@ -246,16 +352,17 @@
       <script src="vendor/sparkline/index.js"></script>
       <script src="vendor/toastr/build/toastr.min.js"></script>
       <script src="vendor/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+      <script src="vendor/bootstrap-datepicker-master/dist/js/bootstrap-datepicker.min.js"></script>
+      <script src="vendor/select2-3.5.2/select2.min.js"></script>
       <!-- App scripts -->
       <script src="scripts/homer.js"></script>
 
       <script>
-        $("input[name='demo3_21']").TouchSpin({
-          min: 10,
-          max: 399,
-          step: 5,
-          initval: 10,
-          postfix: '€'
+        $('.input-daterange').datepicker({
+          format: "dd/mm/yyyy",
+          todayBtn: "linked",
+          language: "de",
+          autoclose: true
         });
       </script>
 
