@@ -4098,6 +4098,26 @@ body.light-skin.fixed-footer .footer {
     margin-top: 3%
 }
 
+@media (min-width: 992px) {
+    img.nfc {
+        /* Rotate div */
+        -ms-transform: rotate(15deg); /* IE 9 */
+        -webkit-transform: rotate(15deg); /* Safari 3-8 */
+        transform: rotate(15deg);
+        width: 15%;
+    }
+}
+
+@media (max-width: 768px) {
+    img.nfc {
+        /* Rotate div */
+        -ms-transform: rotate(15deg); /* IE 9 */
+        -webkit-transform: rotate(15deg); /* Safari 3-8 */
+        transform: rotate(15deg);
+        width: 35%;
+    }
+}
+
 .footermenu {
     padding-bottom: 5px;
     font-size: 13px;
