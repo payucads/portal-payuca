@@ -58,7 +58,7 @@
                         <form name="simpleForm" novalidate="" id="simpleForm" action="#" method="post">
                            <div class="text-center m-b-md" id="wizardControl">
                               <a class="btn btn-primary" href="#step1" data-toggle="tab">Schritt 1 - Kontodaten</a>
-                              <a class="btn btn-default" href="#step2" data-toggle="tab">Schritt 2 - Persönliche Daten</a>
+                              <a class="btn btn-default" href="#step2" data-toggle="tab">Schritt 2 - SMS-Verifizierung</a>
                            </div>
                            <div class="tab-content">
                               <div id="step1" class="p-m tab-pane active">
@@ -89,6 +89,12 @@
                                              <label>Passwort wiederholen</label>
                                              <input type="password" value="" id="" required="" class="form-control" name="passwort" placeholder="******">
                                           </div>
+                                          <div class="form-group col-lg-6">
+                                             <label>Kennzeichen</label>
+                                             <input type="text" value="" id="" required="" class="form-control" name="kennzeichen" placeholder="W7777H">
+                                          </div>
+                                          <div class="form-group col-lg-6">
+                                          </div>
                                        </div>
                                     </div>
                                  </div>
@@ -100,28 +106,26 @@
                                  <div class="row">
                                     <div class="col-lg-12">
                                        <div class="row">
-                                          <div class="form-group col-lg-6">
-                                             <label>Straße</label>
-                                             <input type="text" value="" id="" required="" class="form-control" name="strasse" placeholder="Guglgasse">
+                                          <div class="col-lg-12 text-center">
+                                            <label>TAN Code</label>
                                           </div>
-                                          <div class="form-group col-lg-6">
-                                             <label>Haus / Stiege / Tür</label>
-                                             <input type="text" value="" id="" required="" class="form-control" name="hausstiegetuer" placeholder="8/3/3">
+                                          <div class="form-group col-lg-2 col-lg-offset-2 m-t-lg m-b-xl">
+                                             <input type="text" value="" id="" required="" maxlength="1" class="form-control" name="tan" placeholder="#">
                                           </div>
-                                          <div class="form-group col-lg-6">
-                                             <label>Postleitzahl</label>
-                                             <input type="number" value="" id="" required="" class="form-control" name="postleitzahl" placeholder="1110">
+                                          <div class="form-group col-lg-2 m-t-lg m-b-xl">
+                                             <input type="text" value="" id="" required="" maxlength="1" class="form-control" name="tan" placeholder="#">
                                           </div>
-                                          <div class="form-group col-lg-6">
-                                             <label>Stadt</label>
-                                             <input type="text" value="" id="" required="" class="form-control" name="stadt" placeholder="Wien">
+                                          <div class="form-group col-lg-2 m-t-lg m-b-xl">
+                                             <input type="text" value="" id="" required="" maxlength="1" class="form-control" name="tan" placeholder="#">
                                           </div>
-                                          <div class="form-group col-lg-6">
-                                             <label>Kennzeichen</label>
-                                             <input type="text" value="" id="" required="" class="form-control" name="kennzeichen" placeholder="W7777H">
+                                          <div class="form-group col-lg-2 m-t-lg m-b-xl">
+                                             <input type="text" value="" id="" required="" maxlength="1" class="form-control" name="tan" placeholder="#">
                                           </div>
-                                          <div class="form-group col-lg-6">
-                                          </div>
+                                       </div>
+                                       <div class="row m-b-xl">
+                                         <div class="col-lg-12 text-center">
+                                           <a href="#">Bestätigungscode erneut senden</a>
+                                         </div>
                                        </div>
                                     </div>
                                  </div>
