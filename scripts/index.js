@@ -348,13 +348,48 @@ function initMap() {
   setMarkers(map);
 }
 
-var garages = [
-  ['Garage Nordbahnstraße', 48.2230603, 16.3870206, 5],
-  ['Garage Große Schiffgasse', 48.2160561, 16.3733598, 4],
-  ['Garage Steingasse', 48.1944127, 16.3929966, 3],
-  ['Garage Ungargasse', 48.2005977, 16.385728, 2],
-  ['Garage Barichgasse', 48.1970289, 16.3880833, 1]
-];
+var markers = [
+    {
+        "title": 'Garage Nordbahnstraße',
+        "lat": '48.2230603',
+        "lng": '16.3870206',
+        "address": '1020 Wien, Nordbahnstraße 36',
+        "image": 'http://www.payuca.com/img/garageTest.jpg',
+        "price": '2,00 € / Std.'
+    },
+    {
+        "title": 'Garage Große Schiffgasse',
+        "lat": '48.2160561',
+        "lng": '16.3733598',
+        "address": '1020 Wien, Große Schiffgasse 6',
+        "image": 'http://www.payuca.com/img/garageTest.jpg',
+        "price": '2,00 € / Std.'
+    },
+    {
+        "title": 'Garage Steingasse',
+        "lat": '48.1944127',
+        "lng": '16.3929966',
+        "address": '1030 Wien, Steingasse 10-14',
+        "image": 'http://www.payuca.com/img/garageTest.jpg',
+        "price": '2,00 € / Std.'
+    },
+    {
+        "title": 'Garage Ungargasse',
+        "lat": '48.2005977',
+        "lng": '16.385728',
+        "address": '1030 Wien, Ungargasse 37',
+        "image": 'http://www.payuca.com/img/garageTest.jpg',
+        "price": '2,00 € / Std.'
+    },
+    {
+        "title": 'Garage Barichgasse',
+        "lat": '48.1970289',
+        "lng": '16.3880833',
+        "address": '1030 Wien, Barichgasse 19',
+        "image": 'http://www.payuca.com/img/garageTest.jpg',
+        "price": '2,00 € / Std.'
+    }
+]
 
 function setMarkers(map) {
   var image = {
@@ -369,16 +404,58 @@ function setMarkers(map) {
     type: 'poly'
   };
 
-  for (var i = 0; i < garages.length; i++) {
-    var garage = garages[i];
+  var infoWindow = new google.maps.InfoWindow();
+
+  $('#garage').on('click', function(){
+    infoWindow.setContent("<div style='padding-top: 10px; padding-left: 5px; '><div style='float:left'><img align='left' src='" + data.image + "' alt='" + data.title + "' style='margin-bottom: 10px;' /><br /></div><h5>" + data.title + "</h5>" + data.address + "<br />" + data.price + " <br /><a href='' class='btn btn-outline btn-primary btn-sm' style='margin-top: 10px !important;'>Jetzt reservieren</a></div>");
+    infoWindow.open(map, marker);
+  });
+
+  google.maps.event.addListener(infoWindow, 'domready', function() {
+
+    var iwOuter = $('.gm-style-iw');
+
+    var iwBackground = iwOuter.prev();
+
+    iwBackground.children(':nth-child(2)').css({
+      'background': '#fff'
+    });
+
+    var iwmain = iwBackground.children(':nth-child(2)');
+
+    iwBackground.children(':nth-child(4)').css({
+      'display': 'none'
+    });
+
+    var iwCloseBtn = iwOuter.next();
+
+    iwCloseBtn.css({
+      'right': '5px',
+      'top': '5px',
+      'background': '#fff'
+    });
+
+  });
+
+  for (var i = 0; i < markers.length; i++) {
+    var data = markers[i];
+    var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+
+    // add marker to maps
     var marker = new google.maps.Marker({
-      position: {lat: garage[1], lng: garage[2]},
+      position: myLatlng,
       map: map,
       icon: image,
       shape: shape,
-      title: garage[0],
-      zIndex: garage[3]
+      title: data.title
     });
 
+    //Attach click event to the marker.
+    (function (marker, data) {
+      google.maps.event.addListener(marker, "click", function (e) {
+        infoWindow.setContent("<div style='padding-top: 10px; padding-left: 5px; '><div style='float:left'><img align='left' src='" + data.image + "' alt='" + data.title + "' style='margin-bottom: 10px;' /><br /></div><h5>" + data.title + "</h5>" + data.address + "<br />" + data.price + " <br /><a href='' class='btn btn-outline btn-primary btn-sm' style='margin-top: 10px !important;' data-toggle='modal' data-target='#myModal'>Jetzt reservieren</a></div>");
+        infoWindow.open(map, marker);
+      });
+    })(marker, data);
   }
 }

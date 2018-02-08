@@ -105,11 +105,11 @@
                            <div class="col-lg-6 m-b-md">
                               <label>Kennzeichen 1</label>
                               <div class="input-group">
-                                 <input type="text" class="form-control" value="W7777H" id="" disabled name="kennzeichen">
+                                 <input type="text" class="form-control kennzeichen1" value="W7777H" id="kennzeichen1" disabled name="kennzeichen" required>
                                  <div class="input-group-btn">
                                     <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false"><span class="fa fa-cog"></span></button>
                                     <ul class="dropdown-menu pull-right">
-                                       <li><a href="">Bearbeiten</a></li>
+                                       <li><a id="bearbeiten">Bearbeiten</a></li>
                                        <li><a href="">Entfernen</a></li>
                                     </ul>
                                  </div>
@@ -270,6 +270,14 @@
           $('<div class="col-lg-6 m-b-md"><label>Kennzeichen '+ count + '</label><div class="input-group"><input type="text" class="form-control" placeholder="W7777H" id="" disabled name="kennzeichen"><div class="input-group-btn"><button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false"><span class="fa fa-cog"></span></button><ul class="dropdown-menu pull-right"><li><a href="">Bearbeiten</a></li><li><a href="">Entfernen</a></li></ul></div></div></div>').appendTo('#kennzeichen');
         });
       });
+      </script>
+
+      <script>
+        var count = 1;
+        $('#bearbeiten').click(function(){
+          count++;
+          $('#kennzeichen1').prop('disabled', false);
+        });
       </script>
 
       <script>
