@@ -13,6 +13,7 @@
       <link rel="stylesheet" href="vendor/metisMenu/dist/metisMenu.css" />
       <link rel="stylesheet" href="vendor/animate.css/animate.css" />
       <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" />
+      <link rel="stylesheet" href="vendor/sweetalert/lib/sweet-alert.css">
       <!-- App styles -->
       <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" />
       <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css" />
@@ -245,6 +246,7 @@
 <script src="vendor/metisMenu/dist/metisMenu.min.js"></script>
 <script src="vendor/iCheck/icheck.min.js"></script>
 <script src="vendor/sparkline/index.js"></script>
+<script src="vendor/sweetalert/lib/sweet-alert.min.js"></script>
 <script src="vendor/toastr/build/toastr.min.js"></script>
 <!-- App scripts -->
 <script src="scripts/homer.js"></script>
@@ -292,10 +294,25 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Abbrechen</button>
-        <button type="button" class="btn btn-primary">Reservieren</button>
+        <button type="button" class="btn btn-primary success" data-dismiss="modal">Reservieren</button>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+
+  $(function () {
+    $('.success').click(function(){
+      swal({
+        title: "Reserviert!",
+        text: "Lorem impsum bla bla bla dummy text.",
+        type: "success"
+      });
+    });
+  });
+
+</script>
+
 </body>
 </html>

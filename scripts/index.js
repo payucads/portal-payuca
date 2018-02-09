@@ -461,7 +461,7 @@ function setMarkers(map) {
     //Attach click event to the marker.
     (function (marker, data) {
       google.maps.event.addListener(marker, "click", function (e) {
-        infoWindow.setContent("<div style='padding-top: 10px; padding-left: 5px; '><div style='float:left'><img align='left' src='" + data.image + "' alt='" + data.title + "' style='margin-bottom: 10px;' /><br /></div><h5>" + data.title + "</h5>" + data.address + "<br />" + data.price + " <br /><a href='' class='btn btn-outline btn-primary btn-sm' style='margin-top: 10px !important;' data-toggle='modal' data-target='#myModal'>Jetzt reservieren</a></div>");
+        infoWindow.setContent("<div style='padding-top: 10px; padding-left: 5px; '><div style='float:left'><img align='left' src='" + data.image + "' alt='" + data.title + "' style='margin-bottom: 10px;' /><br /></div><h5>" + data.title + "</h5>" + data.address + "<br />" + data.price + " <br /><a href='' class='btn btn-outline btn-primary btn-sm' style='margin-top: 10px !important; margin-right: 15px !important;' data-toggle='modal' data-target='#myModal'>Jetzt reservieren</a><a href='' class='btn btn-outline btn-primary2 btn-sm' style='margin-top: 10px !important;' data-toggle='modal' data-target='#myModal'>Dauermieter</a></div>");
         infoWindow.open(map, marker);
       });
     })(marker, data);
