@@ -110,7 +110,7 @@
                                     <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false"><span class="fa fa-cog"></span></button>
                                     <ul class="dropdown-menu pull-right">
                                        <li><a id="bearbeiten1">Bearbeiten</a></li>
-                                       <li><a href="">Entfernen</a></li>
+                                       <li><a disabled>Entfernen</a></li>
                                     </ul>
                                  </div>
                               </div>
@@ -251,6 +251,7 @@
       <!-- App scripts -->
       <script src="scripts/homer.js"></script>
       <script src="scripts/cookie.js"></script>
+      <script src="scripts/kennzeichen.js"></script>
 
       <script>
         $(document).ready(function(){
@@ -261,26 +262,6 @@
                 $(this).hide();
             });
         });
-      </script>
-
-      <script>
-        $('#bearbeiten1').click(function(){
-          $('#kennzeichen1').prop('disabled', false);
-        });
-      </script>
-
-      <script>
-      $(function () {
-        var count = 1;
-        $('#add').on('click', function () {
-          count++;
-          $('<div class="col-lg-6 m-b-md"><label>Kennzeichen '+ count + '</label><div class="input-group"><input type="text" class="form-control" placeholder="W7777H" id="kennzeichen' + count + '" disabled name="kennzeichen"><div class="input-group-btn"><button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false"><span class="fa fa-cog"></span></button><ul class="dropdown-menu pull-right"><li><a id="bearbeiten'+ count +'">Bearbeiten</a></li><li><a href="">Entfernen</a></li></ul></div></div></div>').appendTo('#kennzeichen');
-          $('#bearbeiten' + count).click(function(){
-            $('#kennzeichen' + count).prop('disabled', false);
-          });
-        });
-
-      });
       </script>
 
    </body>
