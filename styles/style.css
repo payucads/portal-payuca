@@ -4147,6 +4147,9 @@ body.light-skin.fixed-footer .footer {
     .col-xs-12.text-right, .col-xs-12.text-left {
       text-align: center;
     }
+    .landing-page .heading {
+        margin-top: 115px;
+    }
 }
 
 @media(max-width:992px) {
