@@ -1,8 +1,11 @@
 function initMap() {
-  var myLatLng = {lat: 48.2140718, lng: 16.367119};
 
+  //Map center
+  var myLatLng = {lat: 48.211097, lng: 16.377477};
+
+  //Map options including styling
   var map = new google.maps.Map(document.getElementById('map-canvas'), {
-    zoom: 12,
+    zoom: 13,
     disableDefaultUI: true,
     center: myLatLng,
     styles: [
@@ -348,6 +351,7 @@ function initMap() {
   setMarkers(map);
 }
 
+//Garages
 var markers = [
     {
         "title": 'Garage Nordbahnstraße',
@@ -391,7 +395,10 @@ var markers = [
     }
 ]
 
+//Pins & Info Windows options
 function setMarkers(map) {
+
+  //Pin options
   var image = {
     url: './images/pin.png',
     size: new google.maps.Size(20, 32),
@@ -406,6 +413,7 @@ function setMarkers(map) {
 
   var infoWindow = new google.maps.InfoWindow();
 
+  //InfoWindow content
   $('#garage').on('click', function(){
     infoWindow.setContent("<div style='padding-top: 10px; padding-left: 5px; '><div style='float:left'><img align='left' src='" + data.image + "' alt='" + data.title + "' style='margin-bottom: 10px;' /><br /></div><h5>" + data.title + "</h5>" + data.address + "<br />" + data.price + " <br /><a href='' class='btn btn-outline btn-primary btn-sm' style='margin-top: 10px !important;'>Jetzt reservieren</a></div>");
     infoWindow.open(map, marker);
