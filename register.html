@@ -55,7 +55,7 @@
                <div class="col-lg-12">
                   <div class="hpanel animated-panel zoomIn m-b-xl">
                      <div class="panel-body">
-                        <form name="simpleForm" novalidate="" id="simpleForm" action="#" method="post">
+                        <form name="form" id="form" action="#" method="post">
                            <div class="text-center m-b-md" id="wizardControl">
                               <a class="btn btn-primary" id="schritt1" data-toggle="tab">Schritt 1 - Kontodaten</a>
                               <a class="btn btn-default disabled" id="schritt2" data-toggle="tab">Schritt 2 - SMS-Verifizierung</a>
@@ -67,31 +67,31 @@
                                        <div class="row">
                                           <div class="form-group col-lg-6">
                                              <label>Vorname</label>
-                                             <input type="text" value="" id="" required="" class="form-control" name="vorname" placeholder="Max">
+                                             <input type="text" value="" id="vorname" required="" class="form-control" name="vorname" placeholder="Max">
                                           </div>
                                           <div class="form-group col-lg-6">
                                              <label>Nachname</label>
-                                             <input type="text" value="" id="" required="" class="form-control" name="nachname" placeholder="Musterman">
+                                             <input type="text" value="" id="nachname" required="" class="form-control" name="nachname" placeholder="Musterman">
                                           </div>
                                           <div class="form-group col-lg-6">
                                              <label>E-Mail-Adresse</label>
-                                             <input type="email" value="" id="" required="" class="form-control" name="email" placeholder="max@mail.at">
+                                             <input type="email" value="" id="email" required="" class="form-control" name="email" placeholder="max@mail.at">
                                           </div>
                                           <div class="form-group col-lg-6">
                                              <label>Telefon</label>
-                                             <input type="tel" value="" id="" required="" class="form-control" name="telefon" placeholder="+43 676 6702240">
+                                             <input type="tel" value="" id="telefon" required="" class="form-control" name="telefon" placeholder="+43 676 6702240">
                                           </div>
                                           <div class="form-group col-lg-6">
                                              <label>Passwort</label>
-                                             <input type="password" value="" id="" required="" class="form-control" name="passwort" placeholder="******">
+                                             <input type="password" value="" id="passwort" required="" class="form-control" name="passwort" placeholder="******">
                                           </div>
                                           <div class="form-group col-lg-6">
                                              <label>Passwort wiederholen</label>
-                                             <input type="password" value="" id="" required="" class="form-control" name="passwort" placeholder="******">
+                                             <input type="password" value="" id="passwortwdhln" required="" class="form-control" name="passwortwdhln" placeholder="******">
                                           </div>
                                           <div class="form-group col-lg-6">
                                              <label>Kennzeichen</label>
-                                             <input type="text" value="" id="" required="" class="form-control" name="kennzeichen" placeholder="W7777H">
+                                             <input type="text" value="" id="kennzeichen" required="" class="form-control" name="kennzeichen" placeholder="W7777H">
                                           </div>
                                           <div class="form-group col-lg-6">
                                           </div>
@@ -99,7 +99,7 @@
                                     </div>
                                  </div>
                                  <div class="text-right m-t-xs">
-                                    <a class="btn btn-default next" id="next" href="#step2" data-toggle="tab">Next</a>
+                                    <a class="btn btn-default next" id="next" type="submit" href="#step2" data-toggle="tab">Next</a>
                                  </div>
                               </div>
                               <div id="step2" class="p-m tab-pane">
@@ -250,34 +250,11 @@
       <script src="vendor/iCheck/icheck.min.js"></script>
       <script src="vendor/sparkline/index.js"></script>
       <script src="vendor/toastr/build/toastr.min.js"></script>
+      <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
       <!-- App scripts -->
       <script src="scripts/homer.js"></script>
       <script src="scripts/cookie.js"></script>
-
-      <script>
-
-      $(document).ready(function(){
-        $(".next").click(function(){
-          $("#schritt1").removeClass("btn-primary");
-          $("#schritt1").addClass("btn-default");
-          $("#schritt1").addClass("disabled");
-          $("#schritt2").removeClass("btn-default");
-          $("#schritt2").removeClass("disabled");
-          $("#schritt2").addClass("btn-primary");
-        });
-
-        $(".prev").click(function(){
-          $("#schritt1").removeClass("disabled");
-          $("#schritt1").removeClass("btn-default");
-          $("#schritt1").addClass("btn-primary");
-          $("#schritt2").addClass("btn-default");
-          $("#schritt2").addClass("disabled");
-          $("#schritt2").removeClass("btn-primary");
-        });
-
-      });
-
-      </script>
+      <script src="scripts/form.js"></script>
 
    </body>
 </html>
